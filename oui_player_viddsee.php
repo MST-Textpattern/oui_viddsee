@@ -40,7 +40,9 @@ namespace Oui\Player {
             protected static $glue = array('player/', '?', '&amp;');
         }
 
-        if (txpinterface === 'admin') {
+        global $event;
+
+        if (txpinterface === 'admin' && $event === 'prefs') {
             Viddsee::getInstance();
         }
     }
