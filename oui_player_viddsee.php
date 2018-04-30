@@ -42,7 +42,7 @@ namespace Oui\Player {
 
         global $event;
 
-        if (txpinterface === 'admin' && $event === 'prefs') {
+        if (txpinterface === 'admin' && ($event === 'prefs' || $event === 'plugin_prefs.oui_player_viddsee')) {
             Viddsee::getInstance();
         }
     }
