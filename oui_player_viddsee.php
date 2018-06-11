@@ -40,10 +40,6 @@ namespace Oui\Player {
             protected static $glue = array('player/', '?', '&amp;');
         }
 
-        global $event;
-
-        if (txpinterface === 'admin' && ($event === 'prefs' || $event === 'plugin_prefs.oui_player_viddsee')) {
-            Viddsee::getInstance();
-        }
+        register_callback('Oui\Player\Viddsee::getProvider', 'oui_player', 'plug_providers');
     }
 }
