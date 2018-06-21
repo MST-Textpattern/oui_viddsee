@@ -39,6 +39,15 @@ namespace Oui\Player {
             protected static $src = '//www.viddsee.com/';
             protected static $glue = array('player/', '?', '&amp;');
         }
+    }
+}
 
+namespace {
+    function oui_viddsee($atts) {
+        return oui_player(array_merge(array('provider' => 'viddsee'), $atts));
+    }
+
+    function oui_if_viddsee($atts, $thing) {
+        return oui_if_player(array_merge(array('provider' => 'viddsee'), $atts), $thing);
     }
 }
