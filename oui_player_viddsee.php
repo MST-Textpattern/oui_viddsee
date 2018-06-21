@@ -40,6 +40,5 @@ namespace Oui\Player {
             protected static $glue = array('player/', '?', '&amp;');
         }
 
-        register_callback('Oui\Player\Viddsee::getProvider', 'oui_player', 'plug_providers');
     }
 }
