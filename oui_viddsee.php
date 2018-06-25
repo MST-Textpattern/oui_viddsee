@@ -1,11 +1,11 @@
 <?php
 
 /*
- * This file is part of oui_player_viddsee,
+ * This file is part of oui_viddsee,
  * a oui_player v2+ extension to easily embed
  * Viddsee customizable video players in Textpattern CMS.
  *
- * https://github.com/NicolasGraph/oui_player_viddsee
+ * https://github.com/NicolasGraph/oui_viddsee
  *
  * Copyright (C) 2018 Nicolas Morand
  *
