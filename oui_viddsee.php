@@ -29,23 +29,26 @@
  * @package Oui\Player
  */
 
-namespace Oui {
+namespace Oui;
 
-    if (class_exists('Oui\Provider')) {
+if (class_exists('Oui\Provider')) {
 
-        class Viddsee extends Provider
-        {
-            protected static $patterns = array(
-                'scheme' => '#^(http|https)://(www\.)?(viddsee\.com/(video|player)/)(\S+/)?([^&?/]+)$#i',
-                'id'     => '6',
-            );
-            protected static $src = '//www.viddsee.com/';
-            protected static $glue = array('player/', '?', '&amp;');
-            protected static $dims = array(
-                'width'  => '560',
-                'height' => '315',
-                'ratio'  => '',
-            );
-        }
+    class Viddsee extends Provider
+    {
+        protected static $srcBase = '//www.viddsee.com/';
+        protected static $srcGlue = array('player/', '?', '&amp;');
+        protected static $iniDims = array(
+            'width'      => '560',
+            'height'     => '315',
+            'ratio'      => '',
+            'responsive' => array(
+                'default' => 'false',
+                'valid'   => array('true', 'false'),
+            ),
+        );
+        protected static $mediaPatterns = array(
+            'scheme' => '#^https?://(www\.)?(viddsee\.com/(video|player)/)(\S+/)?([^&?/]+)$#i',
+            'id'     => '5',
+        );
     }
 }
