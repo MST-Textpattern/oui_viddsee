@@ -38,9 +38,13 @@ if (class_exists('Oui\Provider')) {
         protected static $srcBase = '//www.viddsee.com/';
         protected static $srcGlue = array('player/', '?', '&amp;');
         protected static $iniDims = array(
-            'width'  => '560',
-            'height' => '315',
-            'ratio'  => '',
+            'width'      => '560',
+            'height'     => '315',
+            'ratio'      => '',
+            'responsive' => array(
+                'default' => 'false',
+                'valid'   => array('true', 'false'),
+            ),
         );
         protected static $mediaPatterns = array(
             'scheme' => '#^https?://(www\.)?(viddsee\.com/(video|player)/)(\S+/)?([^&?/]+)$#i',
