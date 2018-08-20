@@ -31,9 +31,9 @@
 
 namespace Oui;
 
-if (class_exists('Oui\Provider')) {
+if (class_exists('Oui\Player\Provider')) {
 
-    class Viddsee extends Provider
+    class Viddsee extends Player\Provider
     {
         protected static $srcBase = '//www.viddsee.com/';
         protected static $srcGlue = array('player/', '?', '&amp;');
