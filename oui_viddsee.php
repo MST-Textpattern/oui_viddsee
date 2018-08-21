@@ -33,7 +33,7 @@ namespace Oui;
 
 if (class_exists('Oui\Player\Provider')) {
 
-    class Viddsee extends Player\Provider
+    class Viddsee extends Player\Embed
     {
         protected static $srcBase = '//www.viddsee.com/';
         protected static $srcGlue = array('player/', '?', '&amp;');
